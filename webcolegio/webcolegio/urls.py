@@ -18,10 +18,12 @@ from django.urls import path, include
 from django.conf import settings
 
 urlpatterns = [
-    #url la app de services
-    path('services/',include('services.urls')),
     #url la app de core
     path('',include('core.urls')),
+    #url de la app blog
+    path('blog/',include('blog.urls')),
+    #url la app de services
+    path('services/',include('services.urls')),
     #url de admin
     path('admin/', admin.site.urls),
 ]

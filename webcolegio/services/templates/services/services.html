@@ -36,7 +36,7 @@ Servicios
                             <div class="card-body">
                                 <h3 class="card-title">{{ service.titulo }}</h3>
                                 <p class="card-text mt-3">{{service.subtitulo}}</p>
-                                <a href="{% url 'detalleservicio' service.slug %}" class="btn_1">Saber más</a>
+                                <a href="{% url 'detalleservicio' service.slug  %}" class="btn_1">Saber más</a>
                                 <div class="float-right">
                                     <h4>$ {{ service.mensualidad }} COP</h4>
                                     <a class="text-muted ">Mensuales</a>

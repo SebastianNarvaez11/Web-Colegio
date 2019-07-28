@@ -3,5 +3,5 @@ from .import views
 
 urlpatterns = [
     path('',views.services, name = 'services'),
-    path('<slug:slug>/',views.detalleservicio, name = 'detalleservicio'),
+    path('<slug:slug_servicio>/',views.detalleservicio, name = 'detalleservicio'),
 ]
