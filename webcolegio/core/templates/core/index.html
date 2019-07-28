@@ -1,0 +1,452 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block titulo %}Inicio | Colegio Academico El Poblado{% endblock titulo%}</title>
+    <link rel="icon" href="{{COLEGIO.logo.url}}">
+    <!-- Estilos propios-->
+    <link rel="stylesheet" href="{% static 'core/css/propios.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css'%}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'core/css/animate.css' %}">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="{% static 'core/css/owl.carousel.min.css' %}">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="{% static 'core/css/themify-icons.css' %}">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'core/css/flaticon.css' %}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'core/css/magnific-popup.css' %}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{% static 'core/css/slick.css' %}">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+
+<body>
+    <!--::header part start::-->
+    {% block barra %}
+    <header class="main_menu home_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="{% url 'index' %}"> <img src="{{ COLEGIO.logo.url }}" alt="logo"
+                                height="100"></a>
+                        <div class="banner_text_iner ml-2 mt-4">
+                            <h3> Academico<br>El Poblado</h3>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item ml-5 active">
+                                    <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about' %}">Quienes Somos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'services' %}">Servicios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'services' %}">Docentes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'services' %}">Padres</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% endblock barra %}
+    <!-- Header part end-->
+
+    <!-- banner part start-->
+    {% block baner %}
+    <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-xl-6">
+                    <div class="banner_text">
+                        <div class="banner_text_iner">
+                            <h1>{{ COLEGIO.nombre }}</h1>
+                            <h3>{{ COLEGIO.lema }}</h3>
+                            <p>Replenish seasons may male hath fruit beast were seas saw you arrie said man beast whales
+                                his void unto last session for bite. Set have great you'll male grass yielding yielding
+                                man
+                            </p>
+                            <a href="#" class="btn_1">View Course </a>
+                            <a href="#" class="btn_2">Get Started </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock baner%}
+    <!-- banner part start-->
+    {% block body%}
+    <!-- feature_part start-->
+    <section class="feature_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xl-3 align-self-center">
+                    <div class="single_feature_text ">
+                        <h2>{{COLEGIO.lema}}</h2>
+                        <p>Set have great you male grass yielding an yielding first their you're have called the
+                            abundantly fruit were man </p>
+                        <a href="#" class="btn_1">Leer más</a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <a href="#">
+                        <div class="single_feature" href="#">
+                            <div class="single_feature_part">
+                                <span class="single_feature_icon"><i class="ti-ruler-pencil"></i></span>
+                                <h4>Exelencia Academica</h4>
+                                <p>Set have great you male grasses yielding yielding first their to called deep
+                                    abundantly Set have great you male</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <a href="#">
+                        <div class="single_feature">
+                            <div class="single_feature_part">
+                                <span class="single_feature_icon"><i class="ti-medall"></i></span>
+                                <h4>Docentes Calificados</h4>
+                                <p>Set have great you male grasses yielding yielding first their to called deep
+                                    abundantly Set have great you male</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <a href="#">
+                        <div class="single_feature">
+                            <div class="single_feature_part single_feature_part_2">
+                                <span class="single_service_icon style_icon"><i class="ti-rocket"></i></span>
+                                <h4>Colegio Piloto</h4>
+                                <p>Set have great you male grasses yielding yielding first their to called deep
+                                    abundantly Set have great you male</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- upcoming_event part start-->
+
+    <!--::inicio carrusel ::-->
+    <section class="testimonial_part">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-xl-5">
+                    <div class="section_tittle text-center">
+                        <p>Comunidad</p>
+                        <h2>Nuestros Estudiantes</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="textimonial_iner owl-carousel">
+                        <div class="testimonial_slider">
+                            <div class="row">
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                                    <div class="testimonial_slider_img">
+                                        <img src="{% static 'core/img/fotos/foto2.jpg' %}" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                                    <div class="testimonial_slider_img">
+                                        <img src="{% static 'core/img/fotos/foto1.jpg' %}" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                                    <div class="testimonial_slider_img">
+                                        <img src="{% static 'core/img/fotos/foto9.jpg' %}" alt="#">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial_slider">
+                            <div class="row">
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                                    <div class="testimonial_slider_img">
+                                        <img id="img" src="{% static 'core/img/fotos/foto14.jpeg' %}" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                                    <div class="testimonial_slider_img tamaño">
+                                        <img src="{% static 'core/img/fotos/foto13.jpg' %}" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                                    <div class="testimonial_slider_img">
+                                        <img src="{% static 'core/img/fotos/foto7.jpg' %}" alt="#">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial_slider">
+                            <div class="row">
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                                    <div class="testimonial_slider_img">
+                                        <img src="{% static 'core/img/fotos/foto8.jpg' %}" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                                    <div class="testimonial_slider_img">
+                                        <img src="{% static 'core/img/fotos/foto3.jpg' %}" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                                    <div class="testimonial_slider_img">
+                                        <img src="{% static 'core/img/fotos/foto10.jpg' %}" alt="#">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--fin de carrusel-->
+
+    <!-- learning part start-->
+    <section class="advance_feature learning_part">
+        <div class="container">
+            <div class="row align-items-sm-center align-items-xl-stretch">
+                <div class="col-md-6 col-lg-6">
+                    <div class="learning_member_text">
+                        <h5>Advance feature</h5>
+                        <h2>Our Advance Educator Learning System</h2>
+                        <p>Fifth saying upon divide divide rule for deep their female all hath brind mid Days and beast
+                            greater grass signs abundantly have greater also use over face earth days years under
+                            brought moveth she star</p>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-12 col-lg-6">
+                                <div class="learning_member_text_iner">
+                                    <span class="ti-pencil-alt"></span>
+                                    <h4>Learn Anywhere</h4>
+                                    <p>There earth face earth behold she star so made void two given and also our</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-12 col-lg-6">
+                                <div class="learning_member_text_iner">
+                                    <span class="ti-stamp"></span>
+                                    <h4>Expert Teacher</h4>
+                                    <p>There earth face earth behold she star so made void two given and also our</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="learning_img">
+                        <img src="{% static 'core/img/advance_feature_img.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- learning part end-->
+
+
+    <!-- inicio de contador  -->
+    <section class="member_counter mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_member_counter">
+                        <span class="counter">19</span>
+                        <h4>Docentes</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_member_counter">
+                        <span class="counter">795</span>
+                        <h4>Estudiantes</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_member_counter">
+                        <span class="counter">286</span>
+                        <h4>En cobertura</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_member_counter">
+                        <span class="counter">520</span>
+                        <h4>Egresados</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fin del contador -->
+
+
+    <!--::servicios::-->
+    <section class="blog_part section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5">
+                    <div class="section_tittle text-center">
+                        <p>lo que ofrecemos</p>
+                        <h2>Nuestros Servicios</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    {% for service in lista_servicios %}
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 d-flex pt-4">
+                        <div class="card flex-fill border" style="width: 18rem;">
+                            <div class="contenedor">
+                                <img src="{{ service.imagen.url }}" class="card-img-top imagen" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">{{ service.titulo }}</h3>
+                                <p class="card-text">{{service.subtitulo}}</p>
+                                <a href="#" class="btn_1">Saber más</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mt-5">
+                <a href="{% url 'services' %}" class="btn_1">!Conoce mas servicios¡</a>
+            </div>
+
+        </div>
+    </section>
+    <!--::fin servicios::-->
+    {% endblock body%}
+
+    <!-- footer part start-->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-sm-6 col-md-4 col-xl-3">
+                    <div class="single-footer-widget footer_1">
+                        <a href="index.html"> <img src="{{COLEGIO.logo.url}}" alt="logo" height="100"> </a>
+                        <p>But when shot real her. Chamber her one visite removal six sending himself boys scot
+                            exquisite existend an </p>
+                        <p>But when shot real her hamber her </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-4">
+                    <div class="single-footer-widget footer_2">
+                        <h4>Información</h4>
+                        <p>Stay updated with our latest trends Seed heaven so said place winged over given forth fruit.
+                        </p>
+                        <form action="#">
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder='Enter email address'
+                                        onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Enter email address'">
+                                    <div class="input-group-append">
+                                        <button class="btn btn_1" type="button"><i class="ti-angle-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="social_icon">
+                            <a href="#"> <i class="ti-facebook"></i> </a>
+                            <a href="#"> <i class="ti-twitter-alt"></i> </a>
+                            <a href="#"> <i class="ti-instagram"></i> </a>
+                            <a href="#"> <i class="ti-skype"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-md-4">
+                    <div class="single-footer-widget footer_2">
+                        <h4>Contactenos</h4>
+                        <div class="contact_info">
+                            <p><span> Direccion :</span> {{COLEGIO.direccion}} </p>
+                            <p><span> Telefono :</span> {{COLEGIO.telefono}}</p>
+                            <p><span> Email : </span>{{COLEGIO.email}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copyright_part_text text-center">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p class="footer-text m-0">
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>
+                                        document.write(new Date().getFullYear());
+                                    </script> All rights reserved | This template is made with <i class="ti-heart"
+                                        aria-hidden="true"></i> by <a href="https://colorlib.com"
+                                        target="_blank">Colorlib</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer part end-->
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="{% static 'core/js/jquery-1.12.1.min.js' %}"></script>
+    <!-- popper js -->
+    <script src="{% static 'core/js/popper.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+    <!-- easing js -->
+    <script src="{% static 'core/js/jquery.magnific-popup.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'core/js/swiper.min.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'core/js/masonry.pkgd.js' %}"></script>
+    <!-- particles js -->
+    <script src="{% static 'core/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'core/js/jquery.nice-select.min.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'core/js/slick.min.js' %}"></script>
+    <script src="{% static 'core/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'core/js/waypoints.min.js' %}"></script>
+    <!-- custom js -->
+    <script src="{% static 'core/js/custom.js' %}"></script>
+</body>
+
+</html>

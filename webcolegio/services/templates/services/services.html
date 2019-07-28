@@ -1,0 +1,57 @@
+{% extends 'core/about.html' %}
+{% load static %}
+
+{% block titulo %}
+Servicios
+{% endblock titulo %}
+
+{% block titulobaner %}
+Servicios
+{% endblock titulobaner %}
+
+
+{% block body %}
+
+
+<!--::servicios::-->
+<section class="blog_part section_padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-5">
+                <div class="section_tittle text-center">
+                    <p>lo que ofrecemos</p>
+                    <h2>Nuestros Servicios</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                {% for service in lista_servicios %}
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 d-flex pt-4">
+                    <a href="#">
+                        <div class="card flex-fill border  " style="width: 18rem;">
+                            <div class="contenedor">
+                                <img src="{{ service.imagen.url }}" class="card-img-top imagen" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">{{ service.titulo }}</h3>
+                                <p class="card-text mt-3">{{service.subtitulo}}</p>
+                                <a href="{% url 'detalleservicio' service.slug %}" class="btn_1">Saber más</a>
+                                <div class="float-right">
+                                    <h4>$ {{ service.mensualidad }} COP</h4>
+                                    <a class="text-muted ">Mensuales</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--::fin servicios::-->
+
+{% endblock body %}

@@ -1,0 +1,70 @@
+{% extends 'core/about.html' %}
+{% load static %}
+
+{% block titulo %}
+Servicios | {{ servicio.titulo }}
+{% endblock titulo %}
+
+{% block titulobaner %}
+{{ servicio.titulo }}
+{% endblock titulobaner %}
+
+
+{% block body %}
+<!--================ Start Course Details Area =================-->
+<section class="course_details_area section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 course_details_left">
+                <div class="main_image">
+                    <img class="img-fluid" src="{{ servicio.imagen.url }}" alt="">
+                </div>
+                <div class="content_wrapper">
+                    <h4 class="title_top">{{servicio.subtitulo}}</h4>
+                    <div class="content">
+                        {{ servicio.contenido}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 right-contents">
+                <div class="sidebar_top">
+                    <ul>
+                        <li>
+                            <a class="justify-content-between d-flex" >
+                                <span class="color">{{servicio.titulo}}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="justify-content-between d-flex" >
+                                <p class="color">Mensualidad</p>
+                                <span>$ {{servicio.mensualidad}} COP</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="justify-content-between d-flex" >
+                                <p class="color">Matricula</p>
+                                <span>$ {{servicio.matricula}} COP</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="justify-content-between d-flex" >
+                                <p class="color">Jornadas</p>
+                                <span>{{servicio.jornada}}</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <a href="{% url 'contact' %}" class="btn_1 d-block">Contactanos</a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock body %}
