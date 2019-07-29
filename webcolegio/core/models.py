@@ -6,7 +6,7 @@ from django.db import models
 class Colegio(models.Model):
     nombre = models.CharField('Nombre', max_length=100,)
     lema = models.CharField('Lema', max_length=300, blank=True, null=True)
-    logo = models.ImageField('Logo', upload_to='colegio')
+    logo = models.ImageField('Logo', upload_to='colegio',blank = True, null = True )
     email = models.EmailField('Email', max_length = 200)
     direccion = models.CharField('Dirección', max_length=300,)
     telefono = models.CharField('Telefono', max_length=100)
