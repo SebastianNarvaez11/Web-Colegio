@@ -6,7 +6,7 @@ import re
 class Service(models.Model):
     titulo = models.CharField('Titulo', max_length=200, blank=False, null=False)
     slug = models.SlugField('Slug/Url')
-    descripcion = models.CharField('Descripción', max_length=200, blank=False, null=False  )
+    descripcion = models.CharField('Descripción', max_length=100, blank=False, null=False  )
     contenido = models.TextField('Contenido')
     mensualidad = models.IntegerField('Mensualidad')
     matricula = models.IntegerField('Matricula')

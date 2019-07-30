@@ -104,13 +104,19 @@ Blog
                     <aside class="single_sidebar_widget popular_post_widget">
                         <h3 class="widget_title">Recent Post</h3>
                         {% for post in lista_posts %}
-                        <div class="media post_item">
-                            <img src="{{ post.imagen.url }}" alt="post">
-                            <div class="media-body">
-                                <a href="{% url 'detallepost' post.slug %}">
-                                    <h3>{{post.titulo}}</h3>
-                                </a>
-                                <p>{{post.publicacion}}</p>
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                                <div class="bloque col-md-4">
+                                    <img src="{{ post.imagen.url }}" class="card-img fotobloque" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{post.titulo}}</h5>
+                                        <p class="card-text">{{ post.publicacion}}</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         {% endfor %}
