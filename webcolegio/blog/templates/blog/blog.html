@@ -92,9 +92,9 @@ Blog
                         <ul class="list cat-list">
                             {% for category in categorias %}
                             <li>
-                                <a href="#" class="d-flex">
+                                <a href="{% url 'categoria' category.id %}" class="d-flex">
                                     <p>{{category.nombre}}</p>
-                                    <p>(37)</p>
+                                    <p>({{category.obtener_posts.count }})</p>
                                 </a>
                             </li>
                             {% endfor %}

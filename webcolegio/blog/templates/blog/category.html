@@ -1,0 +1,67 @@
+{% extends 'blog/blog.html' %}
+{% load static %}
+
+
+{% block titulo %}
+Blog | {{categoria.nombre}}
+{% endblock titulo %}
+
+{% block titulobaner %}
+{{categoria.nombre}}
+{% endblock titulobaner %}
+
+
+{% block post %}
+<div class="col-lg-8 mb-5 mb-lg-0">
+    <div class="blog_left_sidebar">
+        {% for post in categoria.obtener_posts.all %}
+        <article class="blog_item">
+            <div class="blog_item_img">
+                <a href="{% url 'detallepost' post.slug %}">
+                    <img class="card-img rounded-0" src="{{ post.imagen.url }}" alt="">
+                </a>
+                <a href="{% url 'detallepost' post.slug %}" class="blog_item_date text-center">
+                    <h3>{{ post.publicacion|date:"d" }}</h3>
+                    <p>{{ post.publicacion|date:"M" }}</p>
+                </a>
+            </div>
+            <div class="blog_details">
+                <a class="d-inline-block" href="{% url 'detallepost' post.slug %}">
+                    <h2>{{ post.titulo }}</h2>
+                </a>
+                <p>{{ post.descripcion }}</p>
+                <ul class="blog-info-link">
+                    <li>
+                        {% for categoria in post.categoria.all %}
+                        <a href="#"><i class="far fa-user"></i>
+                            {{ categoria.nombre }}{% if not forloop.last %},{% endif %}</a>
+                        {% endfor %}
+                    </li>
+                </ul>
+            </div>
+        </article>
+        {% endfor %}
+
+        <nav class="blog-pagination justify-content-center d-flex">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Previous">
+                        <i class="ti-angle-left"></i>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">1</a>
+                </li>
+                <li class="page-item active">
+                    <a href="#" class="page-link">2</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Next">
+                        <i class="ti-angle-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+{% endblock post%}

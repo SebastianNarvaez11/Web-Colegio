@@ -25,7 +25,7 @@ class Post(models.Model):
     contenido = models.TextField('Contenido')
     imagen = models.ImageField('Imagen', upload_to='blog') # autor enlazado con los autores de django
     autor = models.ForeignKey(User, verbose_name='Autor', on_delete=models.CASCADE)
-    categoria = models.ManyToManyField(Category, verbose_name='Categoria', related_name='obtener_posts')
+    categoria = models.ManyToManyField(Category, verbose_name='Categoria', related_name="obtener_posts")
     slug = models.SlugField('Slug/Url')
     publicacion = models.DateField('Fecha de publicacion', default = now)
     creacion = models.DateField('Fecha de creacion', auto_now_add=True)

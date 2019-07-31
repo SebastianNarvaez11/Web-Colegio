@@ -13,3 +13,9 @@ def detallepost(request,slug_post):
     posts = Post.objects.all()
     categorias = Category.objects.all()
     return render(request,'blog/detallepost.html',{'post':post,'lista_posts':posts,'categorias':categorias})
+
+def category(request, id_categoria):
+    categoria = get_object_or_404(Category, id = id_categoria)
+    posts = Post.objects.all()
+    categorias = Category.objects.all()
+    return render(request,'blog/category.html',{'categoria':categoria,'lista_posts':posts,'categorias':categorias})
