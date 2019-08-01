@@ -8,8 +8,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class PostAdmin(admin.ModelAdmin):
-    exclude = ['autor']
-    exclude = ['slug']
+    exclude = ['autor','slug']
+    
 
     readonly_fields = ('publicacion','creacion','edicion')
     list_display = ('titulo','autor','publicacion','post_categories')#muestra la tabla con los campos que se le pasen

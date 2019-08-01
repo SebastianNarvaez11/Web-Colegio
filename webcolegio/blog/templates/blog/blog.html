@@ -15,10 +15,11 @@ Blog
 <section class="blog_area section_padding">
     <div class="container">
         <div class="row">
-            {% block post %}
+
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
-                    {% for post in lista_posts %}
+                    {% block post %}
+                    {% for post in posts %}
                     <article class="blog_item">
                         <div class="blog_item_img">
                             <a href="{% url 'detallepost' post.slug %}">
@@ -45,45 +46,55 @@ Blog
                         </div>
                     </article>
                     {% endfor %}
-
+                    {% endblock post%}
                     <nav class="blog-pagination justify-content-center d-flex">
-                        <ul class="pagination">
+                        <div class="pagination">
+                            {% if posts.has_previous %}
                             <li class="page-item">
-                                <a href="#" class="page-link" aria-label="Previous">
-                                    <i class="ti-angle-left"></i>
-                                </a>
+                                <a href="?page=1" class="page-link">1</a>
                             </li>
+
                             <li class="page-item">
-                                <a href="#" class="page-link">1</a>
+                                <a href="?page={{ posts.previous_page_number }}" class="page-link"
+                                    aria-label="Previous"><i class="ti-angle-left"></i></a>
                             </li>
-                            <li class="page-item active">
-                                <a href="#" class="page-link">2</a>
-                            </li>
+                            {% endif %}
+
+                            <span class="current mr-2 mt-2">
+                                Pagina {{ posts.number }} de {{ posts.paginator.num_pages }}
+                            </span>
+
+                            {% if posts.has_next %}
                             <li class="page-item">
-                                <a href="#" class="page-link" aria-label="Next">
-                                    <i class="ti-angle-right"></i>
-                                </a>
+                                <a href="?page={{ posts.next_page_number }}" class="page-link" aria-label="Next">
+                                    <i class="ti-angle-right"></i></a>
                             </li>
-                        </ul>
+
+                            <li class="page-item">
+                                <a href="?page={{ posts.paginator.num_pages }}"
+                                    class="page-link">{{ posts.paginator.num_pages }}</a>
+                            </li>
+                            {% endif %}
+                        </div>
                     </nav>
                 </div>
             </div>
-            {% endblock post%}
+
             <div class="col-lg-4">
                 <div class="blog_right_sidebar">
                     <aside class="single_sidebar_widget search_widget">
-                        <form action="#">
+                        <form  method="GET">
                             <div class="form-group">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder='Search Keyword'
-                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'">
+                                    <input type="text" class="form-control" placeholder='Buscar'
+                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Buscar'" name="buscar">
                                     <div class="input-group-append">
                                         <button class="btn" type="button"><i class="ti-search"></i></button>
                                     </div>
                                 </div>
                             </div>
                             <button class="button rounded-0 primary-bg text-white w-100 btn_1"
-                                type="submit">Search</button>
+                                type="submit">Buscar</button>
                         </form>
                     </aside>
 
