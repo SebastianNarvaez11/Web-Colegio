@@ -3473,6 +3473,7 @@ ul {
 
 .single_feature_padding {
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 @media (max-width: 576px) {
@@ -3510,7 +3511,7 @@ ul {
 .learning_part {
     position: relative;
     z-index: 99;
-    padding: 189px 0px 210px;
+    padding: 100px 0px 10px;
 }
 
 @media (max-width: 576px) {
@@ -3596,7 +3597,7 @@ ul {
 /* line 47, E:/172 Etrain Education/172_Etrain_Education_html/sass/_learning.scss */
 
 .learning_part .learning_img img {
-    padding: 0px 53px 64px 50px;
+    padding: 0px 100px 64px 100px;
 }
 
 @media (max-width: 576px) {
