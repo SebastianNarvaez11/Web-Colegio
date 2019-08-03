@@ -13,6 +13,7 @@ class Colegio(models.Model):
     horarios = models.CharField('Horarios', max_length=500, blank=True, null=True)
     mision = models.TextField('Misión')
     vision = models.TextField('Vision')
+    historia = models.TextField('Historia')
     creacion = models.DateField('Fecha de creacion', auto_now_add=True)
     edicion = models.DateField('Fecha de edicion', auto_now=True)
 
