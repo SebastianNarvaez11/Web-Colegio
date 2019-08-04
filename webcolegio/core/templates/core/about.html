@@ -41,10 +41,10 @@ Academico | Quienes Somos
                             <li class="nav-item {% if request.path|slice:":10" == '/services/' %}active{% endif %}">
                                 <a class="nav-link" href="{% url 'services' %}">Servicios</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'services' %}">Docentes</a>
+                            <li class="nav-item {% if request.path == '/docentes/' %}active{% endif %}">
+                                <a class="nav-link" href="{% url 'docentes' %}">Docentes</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link" href="{% url 'services' %}">Padres</a>
                             </li>
                             <li class="nav-item {% if request.path|slice:":6" == '/blog/' %}active{% endif %}">
@@ -144,7 +144,6 @@ Academico | Quienes Somos
                     <h2>Nuestros Valores</h2>
                     <p>Set have great you male grass yielding an yielding first their you're
                         have called the abundantly fruit were man </p>
-                    <a href="#" class="btn_1">Leer más</a>
                 </div>
             </div>
             <div class="col-sm-6 col-xl-3 mb-3">

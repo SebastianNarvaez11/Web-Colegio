@@ -60,7 +60,7 @@
                                     <a class="nav-link" href="{% url 'services' %}">Servicios</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'services' %}">Docentes</a>
+                                    <a class="nav-link" href="{% url 'docentes' %}">Docentes</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{% url 'services' %}">Padres</a>
@@ -327,7 +327,7 @@
                 <div class="row d-flex justify-content-center">
                     {% for service in lista_servicios %}
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 d-flex pt-4">
-                        <a href="#">
+                        <a href="{% url 'detalleservicio' service.slug  %}">
                             <div class="card flex-fill border  " style="width: 18rem;">
                                 <div class="contenedor">
                                     <img src="{{ service.imagen.url }}" class="card-img-top imagen" alt="...">
@@ -343,14 +343,15 @@
                                 </div>
                             </div>
                         </a>
-
                     </div>
                     {% endfor %}
+                    <div class=" d-flex align-items-center justify-content-center col-xl-4 col-lg-4 col-md-6 col-sm-6 mt-3">
+                        <a href="{% url 'services' %}"><img src="{% static 'core/img/vermas.png' %}" alt="Conoce mas">
+                            <br> ¡Conoce mas servicios!</a>
+                    </div>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center mt-5">
-                <a href="{% url 'services' %}" class="btn_1">¡Conoce mas servicios!</a>
-            </div>
+
 
         </div>
     </section>
