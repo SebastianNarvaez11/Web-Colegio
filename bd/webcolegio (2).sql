@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-07-2019 a las 05:15:56
+-- Tiempo de generación: 06-08-2019 a las 05:31:18
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.8
 
@@ -102,7 +102,15 @@ INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALU
 (37, 'Can add Categoria', 10, 'add_category'),
 (38, 'Can change Categoria', 10, 'change_category'),
 (39, 'Can delete Categoria', 10, 'delete_category'),
-(40, 'Can view Categoria', 10, 'view_category');
+(40, 'Can view Categoria', 10, 'view_category'),
+(41, 'Can add Docente', 11, 'add_docente'),
+(42, 'Can change Docente', 11, 'change_docente'),
+(43, 'Can delete Docente', 11, 'delete_docente'),
+(44, 'Can view Docente', 11, 'view_docente'),
+(45, 'Can add Materia', 12, 'add_materia'),
+(46, 'Can change Materia', 12, 'change_materia'),
+(47, 'Can delete Materia', 12, 'delete_materia'),
+(48, 'Can view Materia', 12, 'view_materia');
 
 -- --------------------------------------------------------
 
@@ -129,8 +137,8 @@ CREATE TABLE `auth_user` (
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-(1, 'pbkdf2_sha256$150000$1E6zquXJdsVz$IPC6KPMKolxbmk6KxnZfcDZMf44QbQHjlNq5GynqQ2c=', '2019-07-30 00:40:17.283195', 1, 'sebas', '', '', 'sebastian@gmail.com', 1, 1, '2019-07-25 02:44:48.120228'),
-(2, 'pbkdf2_sha256$150000$vE5MHwfOuTyV$vfN4wWYF8vIndcUFpbp0MwFW4Z4r44YbwuJrbPj/hQ0=', '2019-07-30 00:37:05.250763', 0, 'Prueba', 'prueba', 'prueba', 'prueba@gmail.com', 1, 1, '2019-07-30 00:34:09.000000');
+(1, 'pbkdf2_sha256$150000$1E6zquXJdsVz$IPC6KPMKolxbmk6KxnZfcDZMf44QbQHjlNq5GynqQ2c=', '2019-08-03 16:15:24.868375', 1, 'sebas', '', '', 'sebastian@gmail.com', 1, 1, '2019-07-25 02:44:48.120228'),
+(2, 'pbkdf2_sha256$150000$vE5MHwfOuTyV$vfN4wWYF8vIndcUFpbp0MwFW4Z4r44YbwuJrbPj/hQ0=', '2019-08-01 00:20:17.230430', 0, 'Prueba', 'prueba', 'prueba', 'prueba@gmail.com', 1, 1, '2019-07-30 00:34:09.000000');
 
 -- --------------------------------------------------------
 
@@ -215,7 +223,8 @@ INSERT INTO `blog_post` (`id`, `titulo`, `descripcion`, `contenido`, `imagen`, `
 (1, 'Banda Marcial Gana Concurso', 'That dominion stars lights dominion divide years for fourth have don\'t stars is that he earth it first without heaven in place seed it second morning saying.', 'MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower\r\n\r\nMCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually\r\n\r\nMCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.\r\nMCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower\r\n\r\nMCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually', 'blog/WhatsApp_Image_2018-10-24_at_8.59.57_AM_3.jpeg', '2019-07-28', '2019-07-29', 1, '2019-07-28', 'banda-marcial-gana-concurso'),
 (2, 'Izada de bandera', 'MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower', 'MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower\r\n\r\nMCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually\r\n\r\nMCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.\r\nMCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower', 'blog/IMG-20190725-WA0061.jpg', '2019-07-28', '2019-07-29', 1, '2019-07-28', 'izada-de-bandera'),
 (3, 'Convivencia', 'MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot', 'MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower\r\n\r\nMCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually\r\n\r\nMCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.\r\nMCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower', 'blog/IMG-20190725-WA0098.jpg', '2019-07-28', '2019-07-29', 1, '2019-07-28', 'convivencia'),
-(4, 'Papeleria y aseo', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere volutpat porta. Phasellus id', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere volutpat porta. Phasellus id lobortis ligula. Sed dolor libero, rutrum tristique commodo maximus, consectetur eget tellus. Donec eget fringilla felis. Vestibulum pretium metus a ex vestibulum, eget elementum neque facilisis. Fusce et congue dolor. Pellentesque quis egestas tellus. Nunc ut congue lectus. Phasellus ac sapien ac purus blandit vestibulum. Sed eu arcu magna. Vestibulum ac sem vel ante aliquet dapibus eget vel sapien.\r\n\r\nDuis dapibus ante a lobortis varius. Sed turpis felis, luctus a nisl sed, viverra venenatis lacus. Aliquam maximus ultricies ex, id auctor turpis dignissim nec. Nullam tincidunt justo sit amet turpis feugiat, et hendrerit quam rhoncus. Aenean in lorem arcu. Vivamus erat nibh, fringilla vulputate mi sit amet, pretium maximus lacus. Sed malesuada pellentesque nunc. Donec massa turpis, lobortis et urna quis, rutrum faucibus massa.', 'blog/IMG-20190725-WA0109.jpg', '2019-07-29', '2019-07-29', 1, '2019-07-30', 'papeleria-y-aseo');
+(4, 'Papeleria y aseo', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere volutpat porta. Phasellus id', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere volutpat porta. Phasellus id lobortis ligula. Sed dolor libero, rutrum tristique commodo maximus, consectetur eget tellus. Donec eget fringilla felis. Vestibulum pretium metus a ex vestibulum, eget elementum neque facilisis. Fusce et congue dolor. Pellentesque quis egestas tellus. Nunc ut congue lectus. Phasellus ac sapien ac purus blandit vestibulum. Sed eu arcu magna. Vestibulum ac sem vel ante aliquet dapibus eget vel sapien.\r\n\r\nDuis dapibus ante a lobortis varius. Sed turpis felis, luctus a nisl sed, viverra venenatis lacus. Aliquam maximus ultricies ex, id auctor turpis dignissim nec. Nullam tincidunt justo sit amet turpis feugiat, et hendrerit quam rhoncus. Aenean in lorem arcu. Vivamus erat nibh, fringilla vulputate mi sit amet, pretium maximus lacus. Sed malesuada pellentesque nunc. Donec massa turpis, lobortis et urna quis, rutrum faucibus massa.', 'blog/IMG-20190725-WA0109.jpg', '2019-07-29', '2019-07-29', 1, '2019-07-30', 'papeleria-y-aseo'),
+(5, 'Ceremonia clausura', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non dapibus leo. Etiam metus orci, ultrices vitae placerat quis, aliquet in turpis. Cras commodo lorem ut semper congue. Vivamus a nibh in ante laoreet elementum vel sit amet justo. Donec scelerisque dictum libero, sit amet sollicitudin sapien laoreet venenatis. Etiam at gravida odio. Ut interdum aliquet purus ut condimentum. Integer fermentum, augue sit amet blandit egestas, massa ex iaculis mauris, sit amet tincidunt felis nulla id neque. Maecenas molestie lectus urna, eget condimentum nulla congue eget. Praesent purus dolor, euismod vitae sapien venenatis, ultricies cursus ex. Suspendisse fringilla tincidunt elementum. Vivamus gravida massa ante, id eleifend turpis molestie a.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non dapibus leo. Etiam metus orci, ultrices vitae placerat quis, aliquet in turpis. Cras commodo lorem ut semper congue. Vivamus a nibh in ante laoreet elementum vel sit amet justo. Donec scelerisque dictum libero, sit amet sollicitudin sapien laoreet venenatis. Etiam at gravida odio. Ut interdum aliquet purus ut condimentum. Integer fermentum, augue sit amet blandit egestas, massa ex iaculis mauris, sit amet tincidunt felis nulla id neque. Maecenas molestie lectus urna, eget condimentum nulla congue eget. Praesent purus dolor, euismod vitae sapien venenatis, ultricies cursus ex. Suspendisse fringilla tincidunt elementum. Vivamus gravida massa ante, id eleifend turpis molestie a.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non dapibus leo. Etiam metus orci, ultrices vitae placerat quis, aliquet in turpis. Cras commodo lorem ut semper congue. Vivamus a nibh in ante laoreet elementum vel sit amet justo. Donec scelerisque dictum libero, sit amet sollicitudin sapien laoreet venenatis. Etiam at gravida odio. Ut interdum aliquet purus ut condimentum. Integer fermentum, augue sit amet blandit egestas, massa ex iaculis mauris, sit amet tincidunt felis nulla id neque. Maecenas molestie lectus urna, eget condimentum nulla congue eget. Praesent purus dolor, euismod vitae sapien venenatis, ultricies cursus ex. Suspendisse fringilla tincidunt elementum. Vivamus gravida massa ante, id eleifend turpis molestie a.', 'blog/thumb-1920-502309.jpg', '2019-07-31', '2019-07-31', 1, '2019-08-01', 'ceremonia-clausura');
 
 -- --------------------------------------------------------
 
@@ -238,7 +247,8 @@ INSERT INTO `blog_post_categoria` (`id`, `post_id`, `category_id`) VALUES
 (2, 2, 2),
 (3, 3, 1),
 (4, 4, 2),
-(5, 4, 3);
+(5, 4, 3),
+(6, 5, 3);
 
 -- --------------------------------------------------------
 
@@ -250,7 +260,7 @@ CREATE TABLE `core_colegio` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `lema` varchar(300) DEFAULT NULL,
-  `logo` varchar(100) NOT NULL,
+  `logo` varchar(100) DEFAULT NULL,
   `email` varchar(200) NOT NULL,
   `direccion` varchar(300) NOT NULL,
   `telefono` varchar(100) NOT NULL,
@@ -258,15 +268,16 @@ CREATE TABLE `core_colegio` (
   `mision` longtext NOT NULL,
   `vision` longtext NOT NULL,
   `creacion` date NOT NULL,
-  `edicion` date NOT NULL
+  `edicion` date NOT NULL,
+  `historia` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `core_colegio`
 --
 
-INSERT INTO `core_colegio` (`id`, `nombre`, `lema`, `logo`, `email`, `direccion`, `telefono`, `horarios`, `mision`, `vision`, `creacion`, `edicion`) VALUES
-(1, 'Colegio Académico El poblado', '¡Educando con amor y calidad!', 'colegio/Imagen1_imcQBc3.png', 'academicoelpoblado@hotmail.com', 'Carrera 28f No. 72 ° 08 B/El Poblado 1', '437 0688', 'De lunes a viernes', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum pellentesque nunc, id sollicitudin libero vestibulum sit amet. Vivamus interdum et mi sit amet condimentum. Vivamus bibendum, dui vitae tincidunt ultricies, ex libero volutpat justo, sed tempus eros felis et odio. Suspendisse at pellentesque lacus. Nam eget semper nisi. Suspendisse suscipit mi tellus, id posuere ipsum molestie a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sit amet feugiat purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris euismod tincidunt lorem, vitae volutpat justo convallis ac. Vivamus ut nisl nec ipsum sollicitudin pellentesque. Curabitur quis lacinia felis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum pellentesque nunc, id sollicitudin libero vestibulum sit amet. Vivamus interdum et mi sit amet condimentum. Vivamus bibendum, dui vitae tincidunt ultricies, ex libero volutpat justo, sed tempus eros felis et odio. Suspendisse at pellentesque lacus. Nam eget semper nisi. Suspendisse suscipit mi tellus, id posuere ipsum molestie a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sit amet feugiat purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris euismod tincidunt lorem, vitae volutpat justo convallis ac. Vivamus ut nisl nec ipsum sollicitudin pellentesque. Curabitur quis lacinia felis.', '2019-07-01', '2019-07-24');
+INSERT INTO `core_colegio` (`id`, `nombre`, `lema`, `logo`, `email`, `direccion`, `telefono`, `horarios`, `mision`, `vision`, `creacion`, `edicion`, `historia`) VALUES
+(1, 'Colegio Académico El poblado', '¡Educando con amor y calidad!', 'colegio/Imagen1_imcQBc3.png', 'academicoelpoblado@hotmail.com', 'Carrera 28f No. 72 ° 08 B/El Poblado 1', '437 0688', 'De lunes a viernes', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum pellentesque nunc, id sollicitudin libero vestibulum sit amet. Vivamus interdum et mi sit amet condimentum. Vivamus bibendum, dui vitae tincidunt ultricies, ex libero volutpat justo, sed tempus eros felis et odio. Suspendisse at pellentesque lacus. Nam eget semper nisi. Suspendisse suscipit mi tellus, id posuere ipsum molestie a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sit amet feugiat purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris euismod tincidunt lorem, vitae volutpat justo convallis ac. Vivamus ut nisl nec ipsum sollicitudin pellentesque. Curabitur quis lacinia felis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum pellentesque nunc, id sollicitudin libero vestibulum sit amet. Vivamus interdum et mi sit amet condimentum. Vivamus bibendum, dui vitae tincidunt ultricies, ex libero volutpat justo, sed tempus eros felis et odio. Suspendisse at pellentesque lacus. Nam eget semper nisi. Suspendisse suscipit mi tellus, id posuere ipsum molestie a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sit amet feugiat purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris euismod tincidunt lorem, vitae volutpat justo convallis ac. Vivamus ut nisl nec ipsum sollicitudin pellentesque. Curabitur quis lacinia felis.', '2019-07-01', '2019-08-03', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum pellentesque nunc, id sollicitudin libero vestibulum sit amet. Vivamus interdum et mi sit amet condimentum. Vivamus bibendum, dui vitae tincidunt ultricies, ex libero volutpat justo, sed tempus eros felis et odio. Suspendisse at pellentesque lacus. Nam eget semper nisi. Suspendisse suscipit mi tellus, id posuere ipsum molestie a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sit amet feugiat purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris euismod tincidunt lorem, vitae volutpat justo convallis ac. Vivamus ut nisl nec ipsum sollicitudin pellentesque. Curabitur quis lacinia felis.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum pellentesque nunc, id sollicitudin libero vestibulum sit amet. Vivamus interdum et mi sit amet condimentum. Vivamus bibendum, dui vitae tincidunt ultricies, ex libero volutpat justo, sed tempus eros felis et odio. Suspendisse at pellentesque lacus. Nam eget semper nisi. Suspendisse suscipit mi tellus, id posuere ipsum molestie a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sit amet feugiat purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris euismod tincidunt lorem, vitae volutpat justo convallis ac. Vivamus ut nisl nec ipsum sollicitudin pellentesque. Curabitur quis lacinia felis.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum pellentesque nunc, id sollicitudin libero vestibulum sit amet. Vivamus interdum et mi sit amet condimentum. Vivamus bibendum, dui vitae tincidunt ultricies, ex libero volutpat justo, sed tempus eros felis et odio. Suspendisse at pellentesque lacus. Nam eget semper nisi. Suspendisse suscipit mi tellus, id posuere ipsum molestie a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sit amet feugiat purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris euismod tincidunt lorem, vitae volutpat justo convallis ac. Vivamus ut nisl nec ipsum sollicitudin pellentesque. Curabitur quis lacinia felis.');
 
 -- --------------------------------------------------------
 
@@ -367,7 +378,52 @@ INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`,
 (75, '2019-07-30 00:47:29.494136', '3', 'Convivencia', 2, '[]', 9, 1),
 (76, '2019-07-30 00:47:34.785415', '2', 'Izada de bandera', 2, '[]', 9, 1),
 (77, '2019-07-30 00:47:40.006966', '1', 'Banda Marcial Gana Concurso', 2, '[]', 9, 1),
-(78, '2019-07-30 00:47:43.787594', '4', 'Papeleria y aseo', 2, '[]', 9, 1);
+(78, '2019-07-30 00:47:43.787594', '4', 'Papeleria y aseo', 2, '[]', 9, 1),
+(79, '2019-07-31 02:50:03.125173', '7', 'convivencia grado 8', 2, '[{\"changed\": {\"fields\": [\"descripcion\"]}}]', 8, 1),
+(80, '2019-07-31 02:50:09.343870', '5', 'Jardín y Transición', 2, '[{\"changed\": {\"fields\": [\"descripcion\"]}}]', 8, 1),
+(81, '2019-07-31 02:50:15.670327', '4', 'Banda Marcial', 2, '[{\"changed\": {\"fields\": [\"descripcion\"]}}]', 8, 1),
+(82, '2019-07-31 02:50:29.294135', '3', 'Media', 2, '[{\"changed\": {\"fields\": [\"descripcion\"]}}]', 8, 1),
+(83, '2019-07-31 02:50:35.099078', '2', 'Basica Secundaria', 2, '[{\"changed\": {\"fields\": [\"descripcion\"]}}]', 8, 1),
+(84, '2019-07-31 02:50:41.886308', '1', 'Basica Primaria', 2, '[{\"changed\": {\"fields\": [\"descripcion\"]}}]', 8, 1),
+(85, '2019-08-01 00:17:44.994114', '5', 'Ceremonia clausura', 1, '[{\"added\": {}}]', 9, 1),
+(86, '2019-08-03 16:18:55.030574', '1', 'Colegio Académico El poblado', 2, '[{\"changed\": {\"fields\": [\"historia\"]}}]', 7, 1),
+(87, '2019-08-04 15:35:51.421515', '7', 'convivencia grado 8', 2, '[{\"changed\": {\"fields\": [\"index\"]}}]', 8, 1),
+(88, '2019-08-04 15:36:58.680164', '4', 'Banda Marcial', 2, '[{\"changed\": {\"fields\": [\"index\"]}}]', 8, 1),
+(89, '2019-08-04 15:37:37.543855', '7', 'convivencia grado 8', 2, '[]', 8, 1),
+(90, '2019-08-04 15:37:42.987436', '7', 'convivencia grado 8', 2, '[{\"changed\": {\"fields\": [\"index\"]}}]', 8, 1),
+(91, '2019-08-04 15:47:56.116466', '7', 'convivencia grado 8', 2, '[{\"changed\": {\"fields\": [\"index\"]}}]', 8, 1),
+(92, '2019-08-04 16:00:07.365469', '7', 'convivencia grado 8', 2, '[{\"changed\": {\"fields\": [\"index\"]}}]', 8, 1),
+(93, '2019-08-04 16:00:32.808187', '4', 'Banda Marcial', 2, '[{\"changed\": {\"fields\": [\"index\"]}}]', 8, 1),
+(94, '2019-08-04 16:14:35.948724', '3', 'Media', 2, '[{\"changed\": {\"fields\": [\"index\"]}}]', 8, 1),
+(95, '2019-08-06 00:00:26.183553', '1', 'Matematicas', 1, '[{\"added\": {}}]', 12, 1),
+(96, '2019-08-06 00:00:35.674649', '2', 'Español', 1, '[{\"added\": {}}]', 12, 1),
+(97, '2019-08-06 00:00:44.848930', '3', 'Sociales', 1, '[{\"added\": {}}]', 12, 1),
+(98, '2019-08-06 00:00:58.311575', '4', 'Informatica', 1, '[{\"added\": {}}]', 12, 1),
+(99, '2019-08-06 00:01:10.279686', '5', 'Estadistica', 1, '[{\"added\": {}}]', 12, 1),
+(100, '2019-08-06 00:01:17.222625', '6', 'Quimica', 1, '[{\"added\": {}}]', 12, 1),
+(101, '2019-08-06 00:01:24.609955', '7', 'Edu. Fisica', 1, '[{\"added\": {}}]', 12, 1),
+(102, '2019-08-06 00:01:30.861525', '8', 'Fisica', 1, '[{\"added\": {}}]', 12, 1),
+(103, '2019-08-06 00:01:36.169513', '9', 'Ingles', 1, '[{\"added\": {}}]', 12, 1),
+(104, '2019-08-06 00:01:52.623136', '10', 'Naturales', 1, '[{\"added\": {}}]', 12, 1),
+(105, '2019-08-06 00:02:00.747909', '11', 'Catedra De Paz', 1, '[{\"added\": {}}]', 12, 1),
+(106, '2019-08-06 00:02:06.431000', '12', 'Religion', 1, '[{\"added\": {}}]', 12, 1),
+(107, '2019-08-06 00:02:15.257225', '13', 'Economia', 1, '[{\"added\": {}}]', 12, 1),
+(108, '2019-08-06 00:02:24.191605', '14', 'Democracia', 1, '[{\"added\": {}}]', 12, 1),
+(109, '2019-08-06 00:02:35.189109', '15', 'Geometria', 1, '[{\"added\": {}}]', 12, 1),
+(110, '2019-08-06 00:05:39.604045', '1', 'Pedro', 1, '[{\"added\": {}}]', 11, 1),
+(111, '2019-08-06 00:07:07.290106', '2', 'Sandra', 1, '[{\"added\": {}}]', 11, 1),
+(112, '2019-08-06 00:10:50.444207', '16', 'Filosofia', 1, '[{\"added\": {}}]', 12, 1),
+(113, '2019-08-06 01:23:41.786905', '3', 'Carlos Arango', 1, '[{\"added\": {}}]', 11, 1),
+(114, '2019-08-06 01:24:29.657485', '4', 'Camila Plaza', 1, '[{\"added\": {}}]', 11, 1),
+(115, '2019-08-06 01:37:49.781129', '4', 'Camila Plaza', 2, '[{\"changed\": {\"fields\": [\"informacion\"]}}]', 11, 1),
+(116, '2019-08-06 01:37:58.091638', '3', 'Carlos Arango', 2, '[{\"changed\": {\"fields\": [\"informacion\"]}}]', 11, 1),
+(117, '2019-08-06 01:38:09.577249', '2', 'Sandra Torres', 2, '[{\"changed\": {\"fields\": [\"informacion\"]}}]', 11, 1),
+(118, '2019-08-06 01:38:18.835861', '1', 'Pedro Zapata', 2, '[{\"changed\": {\"fields\": [\"informacion\"]}}]', 11, 1),
+(119, '2019-08-06 01:58:41.121595', '5', 'Luis Romero Perez', 1, '[{\"added\": {}}]', 11, 1),
+(120, '2019-08-06 01:59:21.036099', '5', 'Luis Romero Perez', 2, '[{\"changed\": {\"fields\": [\"imagen\"]}}]', 11, 1),
+(121, '2019-08-06 02:02:38.915127', '5', 'Luis Fernando Romero Perez', 2, '[{\"changed\": {\"fields\": [\"nombre\"]}}]', 11, 1),
+(122, '2019-08-06 02:13:25.429306', '5', 'Luis Fernandorrrrrrr Romero Perezrrrrrrrr', 2, '[{\"changed\": {\"fields\": [\"nombre\", \"apellido\"]}}]', 11, 1),
+(123, '2019-08-06 02:14:55.055995', '5', 'Luis Fernando Montealegre', 2, '[{\"changed\": {\"fields\": [\"nombre\", \"apellido\"]}}]', 11, 1);
 
 -- --------------------------------------------------------
 
@@ -394,6 +450,8 @@ INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
 (9, 'blog', 'post'),
 (5, 'contenttypes', 'contenttype'),
 (7, 'core', 'colegio'),
+(11, 'docentes', 'docente'),
+(12, 'docentes', 'materia'),
 (8, 'services', 'service'),
 (6, 'sessions', 'session');
 
@@ -451,7 +509,13 @@ INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 (34, 'blog', '0006_auto_20190729_1512', '2019-07-30 00:47:05.615285'),
 (35, 'blog', '0007_auto_20190729_1609', '2019-07-30 00:47:06.416984'),
 (36, 'blog', '0008_post_slug', '2019-07-30 00:47:06.947030'),
-(37, 'blog', '0009_auto_20190729_1948', '2019-07-30 00:48:51.655697');
+(37, 'blog', '0009_auto_20190729_1948', '2019-07-30 00:48:51.655697'),
+(38, 'core', '0002_auto_20190729_1122', '2019-07-31 02:48:15.443254'),
+(39, 'services', '0011_auto_20190729_1931', '2019-07-31 02:48:15.480233'),
+(40, 'services', '0012_auto_20190730_2148', '2019-07-31 02:50:52.713477'),
+(41, 'core', '0003_colegio_historia', '2019-08-03 16:17:48.682527'),
+(42, 'core', '0004_auto_20190803_1118', '2019-08-03 16:18:30.651733'),
+(43, 'docentes', '0001_initial', '2019-08-05 23:59:20.303830');
 
 -- --------------------------------------------------------
 
@@ -471,7 +535,99 @@ CREATE TABLE `django_session` (
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
 ('11qgmkng8nvie48ld5lunazjmwghaurf', 'YzQ1ZTdkYTRhN2YxYmE1YWVlNTI4MDQ1ZWM0NzhiZDA4NTQzYzc5NTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyYTU0Yzc1NzEwNmQzYzJjMmJiYjA1MDg5OTQ3NGI3MDg0MjI5YmFmIn0=', '2019-08-10 23:05:33.318215'),
-('qtbh5kf6e7o0m4u7bh32f0ovfrzv0ozv', 'YzQ1ZTdkYTRhN2YxYmE1YWVlNTI4MDQ1ZWM0NzhiZDA4NTQzYzc5NTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyYTU0Yzc1NzEwNmQzYzJjMmJiYjA1MDg5OTQ3NGI3MDg0MjI5YmFmIn0=', '2019-08-13 00:40:17.314701');
+('a4ckv8wxseo3ow4ksch1ywsyudyzyl86', 'YzQ1ZTdkYTRhN2YxYmE1YWVlNTI4MDQ1ZWM0NzhiZDA4NTQzYzc5NTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyYTU0Yzc1NzEwNmQzYzJjMmJiYjA1MDg5OTQ3NGI3MDg0MjI5YmFmIn0=', '2019-08-17 16:15:24.943563');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `docentes_docente`
+--
+
+CREATE TABLE `docentes_docente` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `apellido` varchar(100) NOT NULL,
+  `imagen` varchar(100) NOT NULL,
+  `grados` varchar(200) NOT NULL,
+  `informacion` longtext,
+  `creacion` date NOT NULL,
+  `edicion` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `docentes_docente`
+--
+
+INSERT INTO `docentes_docente` (`id`, `nombre`, `apellido`, `imagen`, `grados`, `informacion`, `creacion`, `edicion`) VALUES
+(1, 'Pedro', 'Zapata', 'docentes/testimonial_img_1.png', '6°, 7°, 8°', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nisi quis massa dictum ornare', '2019-08-05', '2019-08-05'),
+(2, 'Sandra', 'Torres', 'docentes/testimonial_img_3.png', 'Jardin, Transición', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nisi quis massa dictum ornare', '2019-08-05', '2019-08-05'),
+(3, 'Carlos', 'Arango', 'docentes/special_cource_1.png', '6°, 7°, 8°', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nisi quis massa dictum ornare', '2019-08-05', '2019-08-05'),
+(4, 'Camila', 'Plaza', 'docentes/cource_3.png', '6°, 7°, 8°, 10°, 11°', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nisi quis massa dictum ornare', '2019-08-05', '2019-08-05'),
+(5, 'Luis Fernando', 'Montealegre', 'docentes/blog_3.png', '6°, 7°, 8°, 10°, 11°', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta lacus eleifend odio hendrerit rho', '2019-08-05', '2019-08-05');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `docentes_docente_materias`
+--
+
+CREATE TABLE `docentes_docente_materias` (
+  `id` int(11) NOT NULL,
+  `docente_id` int(11) NOT NULL,
+  `materia_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `docentes_docente_materias`
+--
+
+INSERT INTO `docentes_docente_materias` (`id`, `docente_id`, `materia_id`) VALUES
+(1, 1, 1),
+(2, 1, 5),
+(3, 1, 15),
+(4, 2, 2),
+(5, 2, 3),
+(6, 3, 3),
+(7, 3, 6),
+(8, 3, 7),
+(9, 4, 10),
+(10, 4, 11),
+(11, 4, 12),
+(13, 5, 4),
+(12, 5, 9);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `docentes_materia`
+--
+
+CREATE TABLE `docentes_materia` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `docentes_materia`
+--
+
+INSERT INTO `docentes_materia` (`id`, `nombre`) VALUES
+(1, 'Matematicas'),
+(2, 'Español'),
+(3, 'Sociales'),
+(4, 'Informatica'),
+(5, 'Estadistica'),
+(6, 'Quimica'),
+(7, 'Edu. Fisica'),
+(8, 'Fisica'),
+(9, 'Ingles'),
+(10, 'Naturales'),
+(11, 'Catedra De Paz'),
+(12, 'Religion'),
+(13, 'Economia'),
+(14, 'Democracia'),
+(15, 'Geometria'),
+(16, 'Filosofia');
 
 -- --------------------------------------------------------
 
@@ -492,7 +648,7 @@ CREATE TABLE `services_service` (
   `matricula` int(11) NOT NULL,
   `mensualidad` int(11) NOT NULL,
   `jornada` varchar(100) DEFAULT NULL,
-  `descripcion` varchar(200) NOT NULL
+  `descripcion` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -500,12 +656,12 @@ CREATE TABLE `services_service` (
 --
 
 INSERT INTO `services_service` (`id`, `titulo`, `contenido`, `imagen`, `creacion`, `edicion`, `estado`, `index`, `slug`, `matricula`, `mensualidad`, `jornada`, `descripcion`) VALUES
-(1, 'Basica Primaria', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacus lectus. In hac habitasse platea dictumst. Duis commodo quam a iaculis sollicitudin. Vestibulum eu urna eget lacus rutrum pulvinar. Cras quis quam commodo, rutrum velit vel, iaculis quam. Sed nec odio vitae massa cursus lacinia. Pellentesque vitae cursus sem. Vivamus a porttitor nisi, auctor vestibulum mi.\r\n\r\nSed vel tincidunt nibh, a ornare mi. Nulla libero ex, condimentum non augue sit amet, porttitor ultrices nisi. Nullam accumsan dolor quis velit eleifend, ut ultricies velit rutrum. In bibendum elit sed nisi bibendum, id egestas ex porttitor. Sed felis ipsum, finibus in risus ut, cursus tincidunt elit. Ut finibus dolor et augue molestie, et mollis felis fermentum. Donec magna augue, iaculis id metus id, eleifend dictum ex.', 'services/IMG-20190725-WA0070.jpg', '2019-07-24', '2019-07-29', 1, 1, 'basica-primaria', 180000, 76000, 'Mañana y Tarde', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere volutpat porta. Phasellus id lobortis ligula. Sed dolor libero, rutrum tristique commodo maximus, consectetur eget tellus.'),
-(2, 'Basica Secundaria', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacus lectus. In hac habitasse platea dictumst. Duis commodo quam a iaculis sollicitudin. Vestibulum eu urna eget lacus rutrum pulvinar. Cras quis quam commodo, rutrum velit vel, iaculis quam. Sed nec odio vitae massa cursus lacinia. Pellentesque vitae cursus sem. Vivamus a porttitor nisi, auctor vestibulum mi.\r\n\r\nSed vel tincidunt nibh, a ornare mi. Nulla libero ex, condimentum non augue sit amet, porttitor ultrices nisi. Nullam accumsan dolor quis velit eleifend, ut ultricies velit rutrum. In bibendum elit sed nisi bibendum, id egestas ex porttitor. Sed felis ipsum, finibus in risus ut, cursus tincidunt elit. Ut finibus dolor et augue molestie, et mollis felis fermentum. Donec magna augue, iaculis id metus id, eleifend dictum ex.', 'services/IMG-20190725-WA0037.jpg', '2019-07-24', '2019-07-29', 1, 1, 'basica-secundaria', 180000, 80000, 'Mañana y Tarde', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere volutpat porta. Phasellus id lobortis ligula. Sed dolor libero, rutrum tristique commodo maximus, consectetur eget tellus.'),
-(3, 'Media', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacus lectus. In hac habitasse platea dictumst. Duis commodo quam a iaculis sollicitudin. Vestibulum eu urna eget lacus rutrum pulvinar. Cras quis quam commodo, rutrum velit vel, iaculis quam. Sed nec odio vitae massa cursus lacinia. Pellentesque vitae cursus sem. Vivamus a porttitor nisi, auctor vestibulum mi.\r\n\r\nSed vel tincidunt nibh, a ornare mi. Nulla libero ex, condimentum non augue sit amet, porttitor ultrices nisi. Nullam accumsan dolor quis velit eleifend, ut ultricies velit rutrum. In bibendum elit sed nisi bibendum, id egestas ex porttitor. Sed felis ipsum, finibus in risus ut, cursus tincidunt elit. Ut finibus dolor et augue molestie, et mollis felis fermentum. Donec magna augue, iaculis id metus id, eleifend dictum ex.', 'services/IMG-20190725-WA0045.jpg', '2019-07-24', '2019-07-29', 1, 1, 'media', 182000, 80000, 'Mañana', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere volutpat porta. Phasellus id lobortis ligula. Sed dolor libero, rutrum tristique commodo maximus, consectetur eget tellus.'),
-(4, 'Banda Marcial', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacus lectus. In hac habitasse platea dictumst. Duis commodo quam a iaculis sollicitudin. Vestibulum eu urna eget lacus rutrum pulvinar. Cras quis quam commodo, rutrum velit vel, iaculis quam. Sed nec odio vitae massa cursus lacinia. Pellentesque vitae cursus sem. Vivamus a porttitor nisi, auctor vestibulum mi.\r\n\r\nSed vel tincidunt nibh, a ornare mi. Nulla libero ex, condimentum non augue sit amet, porttitor ultrices nisi. Nullam accumsan dolor quis velit eleifend, ut ultricies velit rutrum. In bibendum elit sed nisi bibendum, id egestas ex porttitor. Sed felis ipsum, finibus in risus ut, cursus tincidunt elit. Ut finibus dolor et augue molestie, et mollis felis fermentum. Donec magna augue, iaculis id metus id, eleifend dictum ex.', 'services/WhatsApp_Image_2018-10-24_at_8.59.57_AM_4_1.jpeg', '2019-07-24', '2019-07-29', 1, 0, 'banda-marcial', 0, 50000, 'Mañana y Tarde', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere volutpat porta. Phasellus id lobortis ligula. Sed dolor libero, rutrum tristique commodo maximus, consectetur eget tellus.'),
-(5, 'Jardín y Transición', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus rhoncus nisi, et pharetra turpis placerat nec. Donec at nunc et odio pharetra pretium. Fusce tristique imperdiet rhoncus. Quisque erat orci, sollicitudin ac pulvinar et, sagittis id lectus. Maecenas eget congue nunc. Donec quis magna ipsum. Praesent rhoncus diam sit amet dui fringilla, vel varius lacus tempor. Suspendisse porttitor pulvinar felis et egestas. Sed velit ex, consequat placerat leo nec, lacinia pulvinar massa. Cras viverra sapien eu ornare ullamcorper. Fusce suscipit ex at auctor interdum. Curabitur eu fermentum risus, quis fermentum tortor. Proin nisl lectus, aliquam at lectus eu, feugiat iaculis risus. Etiam in arcu lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.', 'services/foto1.jpg', '2019-07-27', '2019-07-29', 1, 1, 'jard-n-y-transici-n', 194000, 82000, 'Mañana y Tarde', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere volutpat porta. Phasellus id lobortis ligula. Sed dolor libero, rutrum tristique commodo maximus, consectetur eget tellus.'),
-(7, 'convivencia grado 8', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere volutpat porta. Phasellus id lobortis ligula. Sed dolor libero, rutrum tristique commodo maximus, consectetur eget tellus. Donec eget fringilla felis. Vestibulum pretium metus a ex vestibulum, eget elementum neque facilisis. Fusce et congue dolor. Pellentesque quis egestas tellus. Nunc ut congue lectus. Phasellus ac sapien ac purus blandit vestibulum. Sed eu arcu magna. Vestibulum ac sem vel ante aliquet dapibus eget vel sapien.\r\n\r\nDuis dapibus ante a lobortis varius. Sed turpis felis, luctus a nisl sed, viverra venenatis lacus. Aliquam maximus ultricies ex, id auctor turpis dignissim nec. Nullam tincidunt justo sit amet turpis feugiat, et hendrerit quam rhoncus. Aenean in lorem arcu. Vivamus erat nibh, fringilla vulputate mi sit amet, pretium maximus lacus. Sed malesuada pellentesque nunc. Donec massa turpis, lobortis et urna quis, rutrum faucibus massa.', 'services/IMG-20190725-WA0093.jpg', '2019-07-29', '2019-07-29', 1, 0, 'convivencia-grado-8', 10000, 30000, 'Mañana', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere volutpat porta. Phasellus id lobortis ligula. Sed dolor libero, rutrum tristique commodo maximus, consectetur eget tellus.');
+(1, 'Basica Primaria', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacus lectus. In hac habitasse platea dictumst. Duis commodo quam a iaculis sollicitudin. Vestibulum eu urna eget lacus rutrum pulvinar. Cras quis quam commodo, rutrum velit vel, iaculis quam. Sed nec odio vitae massa cursus lacinia. Pellentesque vitae cursus sem. Vivamus a porttitor nisi, auctor vestibulum mi.\r\n\r\nSed vel tincidunt nibh, a ornare mi. Nulla libero ex, condimentum non augue sit amet, porttitor ultrices nisi. Nullam accumsan dolor quis velit eleifend, ut ultricies velit rutrum. In bibendum elit sed nisi bibendum, id egestas ex porttitor. Sed felis ipsum, finibus in risus ut, cursus tincidunt elit. Ut finibus dolor et augue molestie, et mollis felis fermentum. Donec magna augue, iaculis id metus id, eleifend dictum ex.', 'services/IMG-20190725-WA0070.jpg', '2019-07-24', '2019-07-30', 1, 1, 'basica-primaria', 180000, 76000, 'Mañana y Tarde', 'Lorem ipsum dolor si'),
+(2, 'Basica Secundaria', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacus lectus. In hac habitasse platea dictumst. Duis commodo quam a iaculis sollicitudin. Vestibulum eu urna eget lacus rutrum pulvinar. Cras quis quam commodo, rutrum velit vel, iaculis quam. Sed nec odio vitae massa cursus lacinia. Pellentesque vitae cursus sem. Vivamus a porttitor nisi, auctor vestibulum mi.\r\n\r\nSed vel tincidunt nibh, a ornare mi. Nulla libero ex, condimentum non augue sit amet, porttitor ultrices nisi. Nullam accumsan dolor quis velit eleifend, ut ultricies velit rutrum. In bibendum elit sed nisi bibendum, id egestas ex porttitor. Sed felis ipsum, finibus in risus ut, cursus tincidunt elit. Ut finibus dolor et augue molestie, et mollis felis fermentum. Donec magna augue, iaculis id metus id, eleifend dictum ex.', 'services/IMG-20190725-WA0037.jpg', '2019-07-24', '2019-07-30', 1, 1, 'basica-secundaria', 180000, 80000, 'Mañana y Tarde', 'Lorem ipsum dolor si'),
+(3, 'Media', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacus lectus. In hac habitasse platea dictumst. Duis commodo quam a iaculis sollicitudin. Vestibulum eu urna eget lacus rutrum pulvinar. Cras quis quam commodo, rutrum velit vel, iaculis quam. Sed nec odio vitae massa cursus lacinia. Pellentesque vitae cursus sem. Vivamus a porttitor nisi, auctor vestibulum mi.\r\n\r\nSed vel tincidunt nibh, a ornare mi. Nulla libero ex, condimentum non augue sit amet, porttitor ultrices nisi. Nullam accumsan dolor quis velit eleifend, ut ultricies velit rutrum. In bibendum elit sed nisi bibendum, id egestas ex porttitor. Sed felis ipsum, finibus in risus ut, cursus tincidunt elit. Ut finibus dolor et augue molestie, et mollis felis fermentum. Donec magna augue, iaculis id metus id, eleifend dictum ex.', 'services/IMG-20190725-WA0045.jpg', '2019-07-24', '2019-08-04', 1, 0, 'media', 182000, 80000, 'Mañana', 'Lorem ipsum dolor'),
+(4, 'Banda Marcial', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacus lectus. In hac habitasse platea dictumst. Duis commodo quam a iaculis sollicitudin. Vestibulum eu urna eget lacus rutrum pulvinar. Cras quis quam commodo, rutrum velit vel, iaculis quam. Sed nec odio vitae massa cursus lacinia. Pellentesque vitae cursus sem. Vivamus a porttitor nisi, auctor vestibulum mi.\r\n\r\nSed vel tincidunt nibh, a ornare mi. Nulla libero ex, condimentum non augue sit amet, porttitor ultrices nisi. Nullam accumsan dolor quis velit eleifend, ut ultricies velit rutrum. In bibendum elit sed nisi bibendum, id egestas ex porttitor. Sed felis ipsum, finibus in risus ut, cursus tincidunt elit. Ut finibus dolor et augue molestie, et mollis felis fermentum. Donec magna augue, iaculis id metus id, eleifend dictum ex.', 'services/WhatsApp_Image_2018-10-24_at_8.59.57_AM_4_1.jpeg', '2019-07-24', '2019-08-04', 1, 0, 'banda-marcial', 0, 50000, 'Mañana y Tarde', 'Lorem ipsum dolor'),
+(5, 'Jardín y Transición', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus rhoncus nisi, et pharetra turpis placerat nec. Donec at nunc et odio pharetra pretium. Fusce tristique imperdiet rhoncus. Quisque erat orci, sollicitudin ac pulvinar et, sagittis id lectus. Maecenas eget congue nunc. Donec quis magna ipsum. Praesent rhoncus diam sit amet dui fringilla, vel varius lacus tempor. Suspendisse porttitor pulvinar felis et egestas. Sed velit ex, consequat placerat leo nec, lacinia pulvinar massa. Cras viverra sapien eu ornare ullamcorper. Fusce suscipit ex at auctor interdum. Curabitur eu fermentum risus, quis fermentum tortor. Proin nisl lectus, aliquam at lectus eu, feugiat iaculis risus. Etiam in arcu lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.', 'services/foto1.jpg', '2019-07-27', '2019-07-30', 1, 1, 'jard-n-y-transici-n', 194000, 82000, 'Mañana y Tarde', 'Lorem ipsum dolor'),
+(7, 'convivencia grado 8', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere volutpat porta. Phasellus id lobortis ligula. Sed dolor libero, rutrum tristique commodo maximus, consectetur eget tellus. Donec eget fringilla felis. Vestibulum pretium metus a ex vestibulum, eget elementum neque facilisis. Fusce et congue dolor. Pellentesque quis egestas tellus. Nunc ut congue lectus. Phasellus ac sapien ac purus blandit vestibulum. Sed eu arcu magna. Vestibulum ac sem vel ante aliquet dapibus eget vel sapien.\r\n\r\nDuis dapibus ante a lobortis varius. Sed turpis felis, luctus a nisl sed, viverra venenatis lacus. Aliquam maximus ultricies ex, id auctor turpis dignissim nec. Nullam tincidunt justo sit amet turpis feugiat, et hendrerit quam rhoncus. Aenean in lorem arcu. Vivamus erat nibh, fringilla vulputate mi sit amet, pretium maximus lacus. Sed malesuada pellentesque nunc. Donec massa turpis, lobortis et urna quis, rutrum faucibus massa.', 'services/IMG-20190725-WA0093.jpg', '2019-07-29', '2019-08-04', 1, 0, 'convivencia-grado-8', 10000, 30000, 'Mañana', 'Lorem ipsum dolor');
 
 --
 -- Índices para tablas volcadas
@@ -613,6 +769,26 @@ ALTER TABLE `django_session`
   ADD KEY `django_session_expire_date_a5c62663` (`expire_date`);
 
 --
+-- Indices de la tabla `docentes_docente`
+--
+ALTER TABLE `docentes_docente`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `docentes_docente_materias`
+--
+ALTER TABLE `docentes_docente_materias`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `docentes_docente_materias_docente_id_materia_id_1f10dbe7_uniq` (`docente_id`,`materia_id`),
+  ADD KEY `docentes_docente_mat_materia_id_20d791a1_fk_docentes_` (`materia_id`);
+
+--
+-- Indices de la tabla `docentes_materia`
+--
+ALTER TABLE `docentes_materia`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `services_service`
 --
 ALTER TABLE `services_service`
@@ -639,7 +815,7 @@ ALTER TABLE `auth_group_permissions`
 -- AUTO_INCREMENT de la tabla `auth_permission`
 --
 ALTER TABLE `auth_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT de la tabla `auth_user`
@@ -669,13 +845,13 @@ ALTER TABLE `blog_category`
 -- AUTO_INCREMENT de la tabla `blog_post`
 --
 ALTER TABLE `blog_post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `blog_post_categoria`
 --
 ALTER TABLE `blog_post_categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `core_colegio`
@@ -687,19 +863,37 @@ ALTER TABLE `core_colegio`
 -- AUTO_INCREMENT de la tabla `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=124;
 
 --
 -- AUTO_INCREMENT de la tabla `django_content_type`
 --
 ALTER TABLE `django_content_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `django_migrations`
 --
 ALTER TABLE `django_migrations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
+--
+-- AUTO_INCREMENT de la tabla `docentes_docente`
+--
+ALTER TABLE `docentes_docente`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `docentes_docente_materias`
+--
+ALTER TABLE `docentes_docente_materias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT de la tabla `docentes_materia`
+--
+ALTER TABLE `docentes_materia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `services_service`
@@ -757,6 +951,13 @@ ALTER TABLE `blog_post_categoria`
 ALTER TABLE `django_admin_log`
   ADD CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
   ADD CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`);
+
+--
+-- Filtros para la tabla `docentes_docente_materias`
+--
+ALTER TABLE `docentes_docente_materias`
+  ADD CONSTRAINT `docentes_docente_mat_docente_id_fb3a72aa_fk_docentes_` FOREIGN KEY (`docente_id`) REFERENCES `docentes_docente` (`id`),
+  ADD CONSTRAINT `docentes_docente_mat_materia_id_20d791a1_fk_docentes_` FOREIGN KEY (`materia_id`) REFERENCES `docentes_materia` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

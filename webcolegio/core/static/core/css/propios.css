@@ -24,3 +24,17 @@
     width: 50%;
     height: auto;
 }
+
+.titulo {
+    white-space: nowrap;
+    font-size: 100%;
+}
+
+.contcard {
+    position: relative;
+}
+
+.boton {
+    position: absolute;
+    bottom: 5px;
+}
