@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'core',
+    'contact',
     'docentes',
-    'pages',
     'services',
+    'social',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'core.processors.ctx_dict',
+                'social.processors.ctx_dict',
             ],
         },
     },

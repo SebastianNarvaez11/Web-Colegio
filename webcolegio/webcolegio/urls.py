@@ -26,6 +26,8 @@ urlpatterns = [
     path('services/',include('services.urls')),
     #url de la app docentes
     path('docentes/',include('docentes.urls')),
+    #url de la app contacto
+    path('contact/',include('contact.urls')),
     #url de admin
     path('admin/', admin.site.urls),
 ]

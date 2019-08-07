@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.core.mail import send_mail
 from .models import Category, Post
 # Register your models here.
 
@@ -24,13 +23,6 @@ class PostAdmin(admin.ModelAdmin):
     # Sobrecrive el metodo save, asignando el usuario logueado al autor que realiza el post
     def save_model(self, request, obj, form, change):
         obj.autor = request.user
-        send_mail(
-            'Subject here',
-            'Here is the message.',
-            'from@example.com',
-            [''],
-            fail_silently=False,
-        )
         super().save_model(request, obj, form, change)
 
     def post_categories(self, obj):

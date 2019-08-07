@@ -5074,13 +5074,13 @@ ul {
 
 .footer-area {
     background-color: #f7f7f7;
-    padding: 100px 0px 20px;
+    padding: 20px 0px 20px;
 }
 
 @media (max-width: 991px) {
     /* line 2, E:/172 Etrain Education/172_Etrain_Education_html/sass/_footer.scss */
     .footer-area {
-        padding: 70px 0px 30px;
+        padding: 20px 0px 30px;
     }
 }
 

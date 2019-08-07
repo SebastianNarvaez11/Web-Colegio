@@ -63,9 +63,6 @@
                                     <a class="nav-link" href="{% url 'docentes' %}">Docentes</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'services' %}">Padres</a>
-                                </li>
-                                <li class="nav-item">
                                     <a class="nav-link" href="{% url 'blog' %}">Blog</a>
                                 </li>
                                 <li class="nav-item">
@@ -345,7 +342,8 @@
                         </a>
                     </div>
                     {% endfor %}
-                    <div class=" d-flex align-items-center justify-content-center col-xl-4 col-lg-4 col-md-6 col-sm-6 mt-3">
+                    <div
+                        class=" d-flex align-items-center justify-content-center col-xl-4 col-lg-4 col-md-6 col-sm-6 mt-3">
                         <a href="{% url 'services' %}"><img src="{% static 'core/img/vermas.png' %}" alt="Conoce mas">
                             <br> ¡Conoce mas servicios!</a>
                     </div>
@@ -375,23 +373,16 @@
                         <h4>Información</h4>
                         <p>Stay updated with our latest trends Seed heaven so said place winged over given forth fruit.
                         </p>
-                        <form action="#">
-                            <div class="form-group">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder='Enter email address'
-                                        onfocus="this.placeholder = ''"
-                                        onblur="this.placeholder = 'Enter email address'">
-                                    <div class="input-group-append">
-                                        <button class="btn btn_1" type="button"><i class="ti-angle-right"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
                         <div class="social_icon">
-                            <a href="#"> <i class="ti-facebook"></i> </a>
-                            <a href="#"> <i class="ti-twitter-alt"></i> </a>
-                            <a href="#"> <i class="ti-instagram"></i> </a>
-                            <a href="#"> <i class="ti-skype"></i> </a>
+                            {% if LINK_FACEBOOK %}
+                            <a href="{{LINK_FACEBOOK}}"> <i class="ti-facebook"></i> </a>
+                            {% endif %}
+                            {% if LINK_TWITTER %}
+                            <a href="{{LINK_TWITTER}}"> <i class="ti-twitter-alt"></i> </a>
+                            {% endif %}
+                            {% if LINK_INSTAGRAM %}
+                            <a href="{{LINK_INSTAGRAM}}"> <i class="ti-instagram"></i> </a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -406,7 +397,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="container-fluid">
             <div class="row">
@@ -415,14 +405,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <p class="footer-text m-0">
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright &copy;
-                                    <script>
-                                        document.write(new Date().getFullYear());
-                                    </script> All rights reserved | This template is made with <i class="ti-heart"
-                                        aria-hidden="true"></i> by <a href="https://colorlib.com"
-                                        target="_blank">Colorlib</a>
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    {{COLEGIO.nombre}} | Copyright 2019&copy;
                                 </p>
                             </div>
                         </div>
