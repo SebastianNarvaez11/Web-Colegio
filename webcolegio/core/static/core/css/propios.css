@@ -34,7 +34,6 @@
     position: relative;
 }
 
-.boton {
-    position: absolute;
-    bottom: 5px;
+.menu{
+    width: 100%;
 }

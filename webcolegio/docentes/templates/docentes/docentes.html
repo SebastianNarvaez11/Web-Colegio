@@ -37,20 +37,19 @@ Docentes
                             <p class="card-text mt-3">
                                 {{docente.informacion}}
                             </p>
-                            <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                                aria-controls="collapseExample">
-                            </a>
-                            <div class="btn-group dropup">
-                                <button type="button" class="btn btn_1 dropdown-toggle" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                </button>
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li type="disc">Grados: {{docente.grados}}</li>
-                                        <li type="disc">Asignaturas:
-                                            {% for materia in docente.materias.all %}{{materia.nombre}}{% if not forloop.last %},
-                                            {% endif %}{% endfor%}</li>
-                                    </ul>
+
+                        </div>
+                        <div class="dropdown dropup">
+                            <button class="btn btn-outline-primary dropdown-toggle menu" type="button"
+                                id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            </button>
+                            <div class="dropdown-menu menu bg-white" aria-labelledby="dropdownMenu2">
+                                <h6 class="dropdown-header text-center">informacion adicional.</h6>
+                                <div class="container">
+                                    <p><p class="text-primary"> Grados:</p></p>{{docente.grados}}</p>
+                                    <p><p class="text-primary"> Asignaturas:</p>
+                                        {% for materia in docente.materias.all %}{{materia.nombre}}{% if not forloop.last %},
+                                        {% endif %}{% endfor%}</p><br>
                                 </div>
                             </div>
                         </div>
